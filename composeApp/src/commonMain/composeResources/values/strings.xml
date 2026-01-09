@@ -1,0 +1,24 @@
+<resources>
+    <string name="trek_state">Stato del trek: </string>
+    <string name="trek_time_length">Durata</string>
+    <string name="trek_difficulty">Difficoltà</string>
+    <string name="trek_length">Lunghezza</string>
+    <string name="trek_price">Prezzo</string>
+    <string name="trek_max_altitude">Altitudine Max</string>
+    <string name="trek_description">Descrizione Trek</string>
+    <string name="trek_departure_date">Data di partenza</string>
+    <string name="trek_return_date">Data di ritorno</string>
+    <string name="trek_equipment">Equipagiamento consigliato</string>
+    <string name="trek_country">Località</string>
+    <string name="trek_meeting_point">Punto di ritrovo</string>
+    <string name="trek_itinerary">Itinerario</string>
+    <string name="trek_transportation">Trasporto</string>
+    <string name="trek_name">Nome</string>
+    <string name="trek_section">Sezione</string>
+    <string name="trek_languages">Lingua</string>
+    <string name="trek_email">Email</string>
+
+    <string name="trek_enroll">Iscriviti</string>
+    <string name="trek_guide">Guida</string>
+
+</resources>

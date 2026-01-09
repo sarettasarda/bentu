@@ -1,0 +1,50 @@
+{
+  "id": "235312",
+  "url": "https://trekkingitalia.org/trek/235312",
+  "title": "NEXT G: Tra mirto e mare a Varazze (SV)",
+  "organizing_section": "Liguria",
+  "dates": {
+    "departure": "2026-01-10",
+    "return": "2026-01-10",
+    "registration_deadline": "2026-01-10"
+  },
+  "location": {
+    "country": "Italia",
+    "meeting_point": "Varazze (SV), stazione FS",
+    "itinerary": "Varazze (m 10) - Piani della Noia (m 329) - Santuario della Madonna della Guardia (m 406) - Varazze"
+  },
+  "technical_details": {
+    "format": "Giornaliero",
+    "duration": "5h",
+    "type": "Itinerante",
+    "difficulty": "Facile / medio",
+    "total_length_km": 10,
+    "max_altitude_m": 400,
+    "elevation_gain_m": 400,
+    "elevation_loss_m": 400,
+    "transportation": "Treno"
+  },
+  "participation": {
+    "fee": 6.0,
+    "currency": "EUR",
+    "min_participants": 5,
+    "max_participants": 20,
+    "status": "Attivo",
+    "payment_methods": ["Online", "Pagamento alla partenza"]
+  },
+  "description": "NEXT G identifica i trek dedicati ai soci giovani (Next Generation). Un trekking ad anello semplice e panoramico che, partendo da Varazze, risale le pendici del Monte Grosso fino al Santuario della Madonna della Guardia. Il sentiero si sviluppa lungo antiche mulattiere immerse nella macchia mediterranea tra pini e mirto.",
+  "equipment_recommended": [
+    "Borraccia da 1 litro",
+    "Coprizaino",
+    "Giacca impermeabile traspirante",
+    "Lampada frontale + pile ricarica",
+    "Guanti e cappello in lana o pile",
+    "Scarponi da trekking",
+    "Thermos",
+    "Zaino giornaliero 20-25 litri"
+  ],
+  "contact": {
+    "email": "genova@trekkingitalia.org",
+    "guide": "Cristiana Carducci"
+  }
+}
