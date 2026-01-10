@@ -23,8 +23,8 @@ fun TrekkingItaliaCommonApp() {
 
         is Screen.TrekDetailScreen ->
             TrekDetailScreen(
-                trek = (screen as Screen.TrekDetailScreen).trek,
-                onBack ={ navigator.goTo(Screen.TrekListScreen) }
+                // trek = (screen as Screen.TrekDetailScreen).trek,
+                onBack = { navigator.goTo(Screen.TrekListScreen) }
             )
 
         Screen.TrekListScreen ->

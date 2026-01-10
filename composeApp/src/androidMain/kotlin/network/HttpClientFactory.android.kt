@@ -8,7 +8,6 @@ import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
-import kotlinx.serialization.json.Json
 
 actual object HttpClientFactory {
     actual fun create(): HttpClient = HttpClient(OkHttp) {
@@ -18,7 +17,7 @@ actual object HttpClientFactory {
             socketTimeoutMillis = 30_000
         }
         install(ContentNegotiation) {
-            json(Json { ignoreUnknownKeys = true; isLenient = true })
+            json(json)
         }
         install(DefaultRequest) {
             contentType(ContentType.Application.Json)
