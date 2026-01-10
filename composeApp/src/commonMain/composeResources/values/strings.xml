@@ -1,4 +1,10 @@
 <resources>
+    <!-- Home Page -->
+    <string name="home_page_title">Trekking Italia</string>
+    <string name="home_page_subtitle">Associazione Amici del Trekking e della Natura</string>
+    <string name="home_page_trek_list_button">Prossimi eventi</string>
+
+    <!-- Trek Details -->
     <string name="trek_state">Stato del trek: </string>
     <string name="trek_time_length">Durata</string>
     <string name="trek_difficulty">Difficoltà</string>
@@ -17,8 +23,6 @@
     <string name="trek_section">Sezione</string>
     <string name="trek_languages">Lingua</string>
     <string name="trek_email">Email</string>
-
     <string name="trek_enroll">Iscriviti</string>
     <string name="trek_guide">Guida</string>
-
 </resources>

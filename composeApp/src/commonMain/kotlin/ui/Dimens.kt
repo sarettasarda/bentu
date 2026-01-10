@@ -8,6 +8,9 @@ object Dimens {
     val small = 8.dp
     val medium = 16.dp
     val large = 24.dp
+    val x_large = 32.dp
+    val xx_large = 56.dp
+    val xxx_large = 82.dp
 
     val cardCornerSmall = 4.dp
     val cardCornerMedium = 8.dp

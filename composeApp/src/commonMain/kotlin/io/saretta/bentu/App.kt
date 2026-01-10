@@ -8,7 +8,7 @@ import home.HomeScreen
 import navigation.Navigator
 import navigation.Screen
 import trekDetails.ui.TrekDetailScreen
-import treks.TrekListScreen
+import treks.ui.TrekListScreen
 
 @Composable
 fun App() {
@@ -24,13 +24,13 @@ fun App() {
         is Screen.TrekDetailScreen ->
             TrekDetailScreen(
                 trek = (screen as Screen.TrekDetailScreen).trek,
-                onBack = { navigator.back() }
+                onBack ={ navigator.goTo(Screen.TrekListScreen) }
             )
 
         Screen.TrekListScreen ->
             TrekListScreen(
                 onTrekClick = { navigator.goTo(Screen.TrekDetailScreen(it)) },
-                onBack = { navigator.back() }
+                onBack = { navigator.home() }
             )
     }
 }

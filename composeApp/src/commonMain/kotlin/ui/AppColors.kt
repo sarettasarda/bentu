@@ -22,3 +22,8 @@ object ButtonColors {
     val Active = Color(0xFF0056A0)
     val Inactive = Color(0xFFBDBDBD)
 }
+
+object BackgroundColors {
+    val Light = Color(0xFFFFFFFF)
+    val Dark = Color(0xFF212121)
+}

@@ -1,6 +1,5 @@
 package trekDetails.ui
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -13,23 +12,17 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import bentu.composeapp.generated.resources.Res
 import bentu.composeapp.generated.resources.trek_country
 import bentu.composeapp.generated.resources.trek_departure_date
@@ -58,13 +51,17 @@ import trekDetails.network.Location
 import trekDetails.network.Trek
 import trekDetails.network.TrekDates
 import trekDetails.network.sample
+import ui.BackgroundColors
 import ui.Colors
 import ui.Dimens
 import ui.asMoney
 import ui.formatIsoToItalian
+import ui.widgets.CustomBodyL
 import ui.widgets.CustomButton
+import ui.widgets.CustomHeadlineM
 import ui.widgets.CustomTag
-import ui.widgets.CustomTitle
+import ui.widgets.CustomTitleL
+import ui.widgets.CustomTopBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -75,27 +72,12 @@ fun TrekDetailScreen(
 ) {
     val scrollState = rememberScrollState()
     Scaffold(
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = trek.title,
-                        maxLines = 1,
-                        style = MaterialTheme.typography.titleMedium
-                    )
-                },
-                navigationIcon = {
-                    IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
-                    }
-                }
-            )
-        }) { innerPadding ->
+        containerColor = BackgroundColors.Light,
+        topBar = { CustomTopBar(trek.title, onBack) }) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .verticalScroll(scrollState)
-                .background(Color.White)
                 .padding(innerPadding)
         ) {
             // Tags
@@ -136,26 +118,18 @@ fun TrekDetailScreen(
 @Composable
 private fun Description(trek: Trek) {
     Column(modifier = Modifier.padding(Dimens.medium)) {
-        CustomTitle(
+        CustomTitleL(
             text = stringResource(Res.string.trek_description),
         )
         Spacer(modifier = Modifier.height(Dimens.spacerMedium))
-        Text(
-            text = trek.description,
-            style = MaterialTheme.typography.bodyLarge,
-            lineHeight = 24.sp
-        )
+        CustomBodyL(trek.description)
     }
 }
 
 @Composable
 private fun TitleAndStatus(trek: Trek) {
     Column(modifier = Modifier.padding(Dimens.medium)) {
-        Text(
-            text = trek.title,
-            style = MaterialTheme.typography.headlineMedium,
-            fontWeight = FontWeight.Bold
-        )
+        CustomHeadlineM(trek.title)
         Spacer(modifier = Modifier.height(Dimens.small))
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
@@ -278,7 +252,7 @@ private fun Equipment(equipment: List<String>) {
             .fillMaxWidth()
             .padding(Dimens.medium)
     ) {
-        CustomTitle(stringResource(Res.string.trek_equipment))
+        CustomTitleL(stringResource(Res.string.trek_equipment))
 
         Spacer(modifier = Modifier.height(Dimens.small))
 
@@ -288,15 +262,11 @@ private fun Equipment(equipment: List<String>) {
                     modifier = Modifier.padding(vertical = Dimens.x_small),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(
+                    CustomBodyL(
                         text = "•",
-                        style = MaterialTheme.typography.bodyLarge,
                         modifier = Modifier.padding(end = Dimens.small)
                     )
-                    Text(
-                        text = item,
-                        style = MaterialTheme.typography.bodyLarge
-                    )
+                    CustomBodyL(item)
                 }
             }
         }
@@ -310,7 +280,7 @@ private fun Location(location: Location) {
             .fillMaxWidth()
             .padding(Dimens.medium)
     ) {
-        CustomTitle(stringResource(Res.string.trek_country))
+        CustomTitleL(stringResource(Res.string.trek_country))
 
         Spacer(modifier = Modifier.height(Dimens.small))
 
@@ -330,7 +300,7 @@ private fun Guide(guide: Guide) {
             .fillMaxWidth()
             .padding(Dimens.medium)
     ) {
-        CustomTitle(stringResource(Res.string.trek_guide))
+        CustomTitleL(stringResource(Res.string.trek_guide))
 
         Spacer(modifier = Modifier.height(Dimens.small))
         Column {
