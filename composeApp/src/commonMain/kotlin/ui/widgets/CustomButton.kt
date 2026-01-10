@@ -9,20 +9,28 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import org.jetbrains.compose.ui.tooling.preview.Preview
 import ui.ButtonColors
 import ui.Dimens
 
 @Composable
 fun CustomButton(
     text: String,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     Button(
         onClick = onClick,
-        modifier = Modifier.fillMaxWidth().padding(Dimens.medium),
+        modifier = modifier.fillMaxWidth().padding(Dimens.medium),
         colors = ButtonDefaults.buttonColors(containerColor = ButtonColors.Active),
         shape = RoundedCornerShape(Dimens.small)
     ) {
         Text(text = text, color = Color.White)
     }
+}
+
+@Composable
+@Preview
+fun CustomButtonPreview() {
+    CustomButton(text = "Click Me", onClick = {})
 }

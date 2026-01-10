@@ -1,6 +1,8 @@
 package navigation
 
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
 class Navigator {
     private val _screen = MutableStateFlow<Screen>(Screen.HomeScreen)
@@ -10,7 +12,7 @@ class Navigator {
         _screen.value = screen
     }
 
-    fun back() {
+    fun home() {
         _screen.value = Screen.HomeScreen
     }
 }
