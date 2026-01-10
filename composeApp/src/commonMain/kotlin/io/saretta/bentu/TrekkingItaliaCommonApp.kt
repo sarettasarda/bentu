@@ -8,10 +8,10 @@ import home.HomeScreen
 import navigation.Navigator
 import navigation.Screen
 import trekDetails.ui.TrekDetailScreen
-import treks.ui.TrekListScreen
+import trekList.ui.TrekListScreen
 
 @Composable
-fun App() {
+fun TrekkingItaliaCommonApp() {
     val navigator = remember { Navigator() }
     val screen by navigator.screen.collectAsState()
 
